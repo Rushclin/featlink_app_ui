@@ -112,7 +112,8 @@
         "title_promotion_section": "Faites votre promotion.",
         "content_promotion_section": "Featlink fait partie du réseau Bantubeat. vous cherchez l'amour mais vous pouvez également trouver de belles relations professionnelles et amicales. mettez de belles photos de vous car grâce a notre principe du swipespay vous pourriez gagnez des Beatzcoins pour vos belles photos.",
         "title_nice_user_section": "Soyez sympa avec les autres utilisateurs.",
-        "content_nice_user_section": "derrière certains messages se cachent des beatzcoins, plus vous répondrez aux autres utilisateurs, plus vous avez des chances de gagner plus de beatzcoins."
+        "content_nice_user_section": "derrière certains messages se cachent des beatzcoins, plus vous répondrez aux autres utilisateurs, plus vous avez des chances de gagner plus de beatzcoins.",
+        "caution": "Attention si vous violez une des règles qui régissent l’ensemble du réseau bantubeat, votre profil sera bloqué, voir supprimé sur toutes les applications du réseau bantubeat."
     },
     "create_profile_step_1o5_screen": {
         "title": "Votre Accroche",
@@ -269,5 +270,17 @@
         "marriage": "Mariage",
         "friendship": "Amitié",
         "professional_relationship": "Relation professionnelle"
+    },
+    "swipezone_full_screen_modal_screen": {
+        "oups": "OUPSSSS",
+        "tag_name": "@{} n’a pas encore liké ton profil",
+        "unlock_conversation": "Dévérouille la conversation avec {} Jetons",
+        "where_to_chosse_featlink": "Ou choisir un accès Featlink",
+        "amount": "Votre solde Jetons",
+        "buy_chips": "Acheter des Jetons",
+        "active_button": "ACTIVER",
+        "hour_number": "ACCÈS {} heures",
+        "access": "ACCÈS",
+        "active": "ACTIVER"
     }
 }

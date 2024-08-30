@@ -85,71 +85,75 @@ class _AppNavigationBottomSheetState extends State<AppNavigationBottomSheet> {
       }
     }
 
-    return Stack(
-      children: [
-        Positioned(
-          bottom: 0,
-          child: Container(
-            width: screenWidth,
-            padding: const EdgeInsets.only(top: 20, bottom: 16),
-            decoration: const BoxDecoration(color: AppColors.myWhite),
-            child: Wrap(
-              runSpacing: 16,
-              children: List.generate(isExpanded ? icons.length : 5, (index) {
-                return SizedBox(
-                  width: screenWidth / 5,
-                  child: Column(
-                    children: [
-                      buildIcon(context, icons[index]),
-                      Text(
-                        icons[index].label,
-                        style: const TextStyle(
-                          fontSize: 12,
+    return Container(
+      height: isExpanded ? 250 : 105,
+      decoration: const BoxDecoration(color: Colors.transparent),
+      child: Stack(
+        children: [
+          Positioned(
+            bottom: 0,
+            child: Container(
+              width: screenWidth,
+              padding: const EdgeInsets.only(top: 20, bottom: 16),
+              decoration: const BoxDecoration(color: AppColors.myWhite),
+              child: Wrap(
+                runSpacing: 16,
+                children: List.generate(isExpanded ? icons.length : 5, (index) {
+                  return SizedBox(
+                    width: screenWidth / 5,
+                    child: Column(
+                      children: [
+                        buildIcon(context, icons[index]),
+                        Text(
+                          icons[index].label,
+                          style: const TextStyle(
+                            fontSize: 12,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                );
-              }),
+                      ],
+                    ),
+                  );
+                }),
+              ),
             ),
           ),
-        ),
-        Positioned(
-          left: 0,
-          right: 0,
-          bottom: isExpanded ? 218 : 70, // Adjust bottom value as needed
-          child: Align(
-            child: GestureDetector(
-              onTap: () => {
-                setState(() {
-                  isExpanded = !isExpanded;
-                }),
-              },
-              onVerticalDragStart: (DragStartDetails details) => {
-                setState(() {
-                  isExpanded = !isExpanded;
-                }),
-              },
-              child: Container(
-                width: 32, // Adjust size as needed
-                height: 32, // Adjust size as needed
-                decoration: const BoxDecoration(
-                  color: AppColors.myWhite,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  isExpanded
-                      ? Icons.keyboard_arrow_down
-                      : Icons.keyboard_arrow_up,
-                  size: 32,
-                  color: AppColors.myGray,
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: isExpanded ? 218 : 70, // Adjust bottom value as needed
+            child: Align(
+              child: GestureDetector(
+                onTap: () => {
+                  setState(() {
+                    isExpanded = !isExpanded;
+                  }),
+                },
+                onVerticalDragStart: (DragStartDetails details) => {
+                  setState(() {
+                    isExpanded = !isExpanded;
+                  }),
+                },
+                child: Container(
+                  width: 32, // Adjust size as needed
+                  height: 32, // Adjust size as needed
+                  decoration: const BoxDecoration(
+                    color: AppColors.myWhite,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    isExpanded
+                        ? Icons.keyboard_arrow_down
+                        : Icons.keyboard_arrow_up,
+                    size: 32,
+                    color: AppColors.myGray,
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

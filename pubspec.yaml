@@ -11,6 +11,7 @@ environment:
 
 dependencies:
   cached_network_image: ^3.4.1
+  carousel_slider: ^5.0.0
   choice: ^2.3.2
   country_picker: ^2.0.26
   dotted_border: ^2.1.0
@@ -44,5 +45,4 @@ flutter:
     - assets/i18n/
     - assets/images/
     - assets/svgs/
-    - assets/svg/
 

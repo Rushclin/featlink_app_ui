@@ -4,6 +4,8 @@ import 'package:flutter/material.dart' show Widget;
 import 'screens/_create_profile/create_profile_step_1o2_screen.dart';
 import 'screens/_create_profile/create_profile_step_1o5_screen.dart';
 import 'screens/_create_profile/create_profile_step_2o2_screen/create_profile_step_2o2_screen.dart';
+import 'screens/_swipe/swipezone_full_screen_modal_screen/swipezone_full_screen_modal_africa_screen.dart';
+import 'screens/_swipe/swipezone_full_screen_modal_screen/swipezone_full_screen_modal_screen.dart';
 import 'screens/_swipe/filter_screen/filter_screen.dart';
 import 'screens/welcome2_screen/welcome2_screen.dart';
 import 'screens/welcome_screen.dart';
@@ -61,6 +63,10 @@ final Map<String, Widget Function()> allScreens = {
 
   'notifications_screen.dart': () => const NotificationsScreen(),
   'filter_screen.dart': () => const FilterScreen(),
+  'swipezone_full_screen_modal_screen.dart': () =>
+      SwipezoneFullScreenModalScreen(),
+  'swipezone_full_screen_modal_africa_screen.dart': () =>
+      SwipezoneFullScreenModalAfricaScreen(),
 
   // Ajoutez d'autres chemins de fichiers ici
 };

@@ -13,124 +13,150 @@ class CreateProfileStep2o2Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsetsDirectional.symmetric(horizontal: 30),
-          child: Column(
-            children: [
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(),
-                    child: Text(
-                      '2/3',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(),
-                child: Row(
-                  children: [
-                    SizedBox.square(
-                      dimension: min(80, screenSize.width - 200),
-                      child: Image.asset(
-                        AppAssets.imageLogo2,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Flexible(
-                      child: Text(
-                        LocaleKeys.create_profile_step_2o2_screen_title.tr(),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 25),
+      body: Column(
+        children: [
+          Expanded(
+            // Ajouté pour s'assurer que le contenu est scrollable
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsetsDirectional.symmetric(horizontal: 30),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    RicheTextSection(
-                      sectionTitle: LocaleKeys
-                          .create_profile_step_2o2_screen_title_loyalty_section
-                          .tr(),
-                      sectionContent: LocaleKeys
-                          .create_profile_step_2o2_screen_content_loyalty_section
-                          .tr(),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 8,
+                          ),
+                          child: Text(
+                            '2/3',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    RicheTextSection(
-                      sectionTitle: LocaleKeys
-                          .create_profile_step_2o2_screen_title_respect_section
-                          .tr(),
-                      sectionContent: LocaleKeys
-                          .create_profile_step_2o2_screen_content_respect_section
-                          .tr(),
-                      coloredText: LocaleKeys
-                          .create_profile_step_2o2_screen_community_rules
-                          .tr(),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 10,
+                      ),
+                      child: Row(
+                        children: [
+                          SizedBox.square(
+                            dimension: min(80, screenSize.width - 200),
+                            child: Image.asset(
+                              AppAssets.imageLogo2,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Flexible(
+                            child: Text(
+                              LocaleKeys.create_profile_step_2o2_screen_title
+                                  .tr(),
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 3,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    RicheTextSection(
-                      sectionTitle: LocaleKeys
-                          .create_profile_step_2o2_screen_title_security_section
-                          .tr(),
-                      sectionContent: LocaleKeys
-                          .create_profile_step_2o2_screen_content_security_section
-                          .tr(),
-                    ),
-                    RicheTextSection(
-                      sectionTitle: LocaleKeys
-                          .create_profile_step_2o2_screen_title_advice_section
-                          .tr(),
-                      sectionContent: LocaleKeys
-                          .create_profile_step_2o2_screen_content_advice_section
-                          .tr(),
-                    ),
-                    RicheTextSection(
-                      sectionTitle: LocaleKeys
-                          .create_profile_step_2o2_screen_title_promotion_section
-                          .tr(),
-                      sectionContent: LocaleKeys
-                          .create_profile_step_2o2_screen_content_promotion_section
-                          .tr(),
-                    ),
-                    RicheTextSection(
-                      sectionTitle: LocaleKeys
-                          .create_profile_step_2o2_screen_title_nice_user_section
-                          .tr(),
-                      sectionContent: LocaleKeys
-                          .create_profile_step_2o2_screen_content_nice_user_section
-                          .tr(),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 25),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RicheTextSection(
+                            sectionTitle: LocaleKeys
+                                .create_profile_step_2o2_screen_title_loyalty_section
+                                .tr(),
+                            sectionContent: LocaleKeys
+                                .create_profile_step_2o2_screen_content_loyalty_section
+                                .tr(),
+                          ),
+                          RicheTextSection(
+                            sectionTitle: LocaleKeys
+                                .create_profile_step_2o2_screen_title_respect_section
+                                .tr(),
+                            sectionContent: LocaleKeys
+                                .create_profile_step_2o2_screen_content_respect_section
+                                .tr(),
+                            coloredText: LocaleKeys
+                                .create_profile_step_2o2_screen_community_rules
+                                .tr(),
+                          ),
+                          RicheTextSection(
+                            sectionTitle: LocaleKeys
+                                .create_profile_step_2o2_screen_title_security_section
+                                .tr(),
+                            sectionContent: LocaleKeys
+                                .create_profile_step_2o2_screen_content_security_section
+                                .tr(),
+                          ),
+                          RicheTextSection(
+                            sectionTitle: LocaleKeys
+                                .create_profile_step_2o2_screen_title_advice_section
+                                .tr(),
+                            sectionContent: LocaleKeys
+                                .create_profile_step_2o2_screen_content_advice_section
+                                .tr(),
+                          ),
+                          RicheTextSection(
+                            sectionTitle: LocaleKeys
+                                .create_profile_step_2o2_screen_title_promotion_section
+                                .tr(),
+                            sectionContent: LocaleKeys
+                                .create_profile_step_2o2_screen_content_promotion_section
+                                .tr(),
+                          ),
+                          RicheTextSection(
+                            sectionTitle: LocaleKeys
+                                .create_profile_step_2o2_screen_title_nice_user_section
+                                .tr(),
+                            sectionContent: LocaleKeys
+                                .create_profile_step_2o2_screen_content_nice_user_section
+                                .tr(),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 10,
+                            ),
+                            child: Text(
+                              LocaleKeys.create_profile_step_2o2_screen_caution
+                                  .tr(),
+                              style: const TextStyle(
+                                fontSize: 10,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
-              PrimaryButton(
-                text: LocaleKeys.common_next.tr(),
-                onPressed: (_) {},
-                fontSize: 24,
-              ),
-              const GradiantBottomBar(),
-            ],
+            ),
           ),
-        ),
+          PrimaryButton(
+            text: LocaleKeys.common_next.tr(),
+            onPressed: (_) {},
+            fontSize: 24,
+          ),
+          const GradiantBottomBar(),
+        ],
       ),
     );
   }
