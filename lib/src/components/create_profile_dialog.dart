@@ -13,7 +13,9 @@ class CreateProfileDialog extends StatelessWidget {
   const CreateProfileDialog({
     required this.title1,
     required this.title2,
-    required this.buttonText, required this.buttonAction, this.subTitle,
+    required this.buttonText,
+    required this.buttonAction,
+    this.subTitle,
     this.description1,
     this.description2,
   });
@@ -28,27 +30,59 @@ class CreateProfileDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           FittedBox(
-            child: Text(title1.toUpperCase(),style: const TextStyle(fontSize: 32,fontWeight: FontWeight.w900,fontFamily: 'inter'),),
+            child: Text(
+              title1.toUpperCase(),
+              style: const TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.w900,
+                fontFamily: 'inter',
+              ),
+            ),
           ),
-          const SizedBox(height: 20,),
+          const SizedBox(
+            height: 20,
+          ),
           FittedBox(
-            child: Text(title2,style: const TextStyle(fontSize: 32,fontWeight: FontWeight.w900,fontFamily: 'inter'),),
+            child: Text(
+              title2,
+              style: const TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.w900,
+                fontFamily: 'inter',
+              ),
+            ),
           ),
           Visibility(
             visible: description1 != null,
             child: FittedBox(
-              child: Text('$description1',style: const TextStyle(fontSize: 14,fontWeight: FontWeight.w400,fontFamily: 'inter'),),
+              child: Text(
+                '$description1',
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: 'inter',
+                ),
+              ),
             ),
           ),
-
-          const SizedBox(height: 10,),
-          FittedBox(
-            child: Text('$description2',style: const TextStyle(fontSize: 14,fontWeight: FontWeight.w400,fontFamily: 'inter'),),
+          const SizedBox(
+            height: 10,
           ),
-          const SizedBox(height: 10,),
+          FittedBox(
+            child: Text(
+              '$description2',
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                fontFamily: 'inter',
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
         ],
       ),
-
       actions: [
         ElevatedButton(
           onPressed: () => buttonAction,

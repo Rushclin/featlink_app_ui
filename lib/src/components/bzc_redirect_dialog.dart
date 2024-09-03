@@ -31,7 +31,7 @@ class _BzcRedirectDialogState extends State<BzcRedirectDialog> {
             AppColors.myPink,
           ],
         ),
-      ),// Adjust the height as needed
+      ), // Adjust the height as needed
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: SizedBox(
@@ -54,42 +54,45 @@ class _BzcRedirectDialogState extends State<BzcRedirectDialog> {
                   ),
                 ),
               ),
-              Expanded(child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      widget.redirectionType == BzcRedirectionType.buy
-                          ? LocaleKeys.modal_redirection_payment_message.tr()
-                          : LocaleKeys.modal_redirection_recieving_message.tr(),
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w900,
-                        //color: AppColors.myTextDarkSoft,
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        widget.redirectionType == BzcRedirectionType.buy
+                            ? LocaleKeys.modal_redirection_payment_message.tr()
+                            : LocaleKeys.modal_redirection_recieving_message
+                                .tr(),
+                        style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w900,
+                          //color: AppColors.myTextDarkSoft,
+                        ),
                       ),
-                    ),
-                    //SizedBox(height: 20),
-                    Text(
-                      LocaleKeys.modal_redirection_redirect_message.tr(),
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w900,
-                        //color: AppColors.myTextDarkSoft,
+                      //SizedBox(height: 20),
+                      Text(
+                        LocaleKeys.modal_redirection_redirect_message.tr(),
+                        style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w900,
+                          //color: AppColors.myTextDarkSoft,
+                        ),
                       ),
-                    ),
-                    Text(
-                      LocaleKeys.modal_redirection_text3.tr(),
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w900,
-                        color: AppColors.myDark,
+                      Text(
+                        LocaleKeys.modal_redirection_text3.tr(),
+                        style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.myDark,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),),
+              ),
               FittedBox(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 12),
@@ -99,7 +102,9 @@ class _BzcRedirectDialogState extends State<BzcRedirectDialog> {
                       Checkbox(
                         value: _isChecked,
                         checkColor: AppColors.myWhite,
-                        side: const BorderSide(color: AppColors.primary,),
+                        side: const BorderSide(
+                          color: AppColors.primary,
+                        ),
                         onChanged: (value) {
                           setState(() {
                             _isChecked = value ?? false;
@@ -115,7 +120,9 @@ class _BzcRedirectDialogState extends State<BzcRedirectDialog> {
                           color: AppColors.myDark,
                         ),
                       ),
-                      const SizedBox(width: 20,),
+                      const SizedBox(
+                        width: 20,
+                      ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.primary,
@@ -130,7 +137,6 @@ class _BzcRedirectDialogState extends State<BzcRedirectDialog> {
                   ),
                 ),
               ),
-
             ],
           ),
         ),
@@ -138,6 +144,3 @@ class _BzcRedirectDialogState extends State<BzcRedirectDialog> {
     );
   }
 }
-
-
-

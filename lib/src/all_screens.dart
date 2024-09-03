@@ -64,9 +64,9 @@ final Map<String, Widget Function()> allScreens = {
   'notifications_screen.dart': () => const NotificationsScreen(),
   'filter_screen.dart': () => const FilterScreen(),
   'swipezone_full_screen_modal_screen.dart': () =>
-      SwipezoneFullScreenModalScreen(),
+      const SwipezoneFullScreenModalScreen(),
   'swipezone_full_screen_modal_africa_screen.dart': () =>
-      SwipezoneFullScreenModalAfricaScreen(),
+      const SwipezoneFullScreenModalAfricaScreen(),
 
   // Ajoutez d'autres chemins de fichiers ici
 };

@@ -10,6 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SwipezoneFullScreenModalScreen extends StatefulWidget {
+  const SwipezoneFullScreenModalScreen();
+
   @override
   State<SwipezoneFullScreenModalScreen> createState() =>
       _SwipezoneFullScreenModalScreenState();
@@ -157,7 +159,7 @@ class _SwipezoneFullScreenModalScreenState
                 width: 312,
                 height: 55,
                 decoration: BoxDecoration(
-                  color: AppColors.primary,
+                  color: AppColors.primary.withOpacity(0.65),
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Center(
@@ -170,8 +172,9 @@ class _SwipezoneFullScreenModalScreenState
                       LocaleKeys
                           .swipezone_full_screen_modal_screen_unlock_conversation
                           .tr(args: ['20']),
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(0.65),
                         fontSize: 16,
                       ),
                     ),
