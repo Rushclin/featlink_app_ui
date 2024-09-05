@@ -4,7 +4,14 @@
         "next": "Suivant",
         "gender_male": "Homme",
         "gender_female": "Femme",
-        "gender_other": "Autres"
+        "gender_other": "Autres",
+        "access_duration_hour": "ACCÈS {} HEURES",
+        "access_hour": "{} HEURES",
+        "access_duration_days": "ACCÈS {} JOURS",
+        "access_duration_month": "{} MOIS",
+        "access": "ACCÈS",
+        "active": "ACTIVER",
+        "expiresAt": "EXPIRE DANS"
     },
     "welcome_screen": {
         "greeting": "Bienvenue \"{}\"",
@@ -137,6 +144,22 @@
         "description2v7": "et toutes les politiques et conditions de Bantubeat.",
         "confirm": "Confirm",
         "return": "Retour"
+    },
+    "create_profile_step_110_screen": {
+        "title1": "Félicitation votre profil est crée",
+        "title2": "Qui peut voir votre profil Featlink ?",
+        "title3": "Les conditions que vous acceptez",
+        "description1v1": "Votre profil Featlink peut être visible par tous les utilisateurs de Featlink. ",
+        "description1v2": "votre nom de profil Featlink reste le même que celui sur bantubeat. si vous voulez modifier votre nom de profil retournez dans votre compte sur bantubeat, dans paramètre gestion de compte. ",
+        "description2v1": "Votre activité sur Featlink pourrait être utilisée pour personnaliser votre expérience sur les produits Bantubeat et notamment les publicités que vous pourriez voir. En appuyant sur confirmer, vous accepter ",
+        "description2v2": "les conditions d'utilisation de Featlink, ",
+        "description2v3": "les ",
+        "description2v4": "conditions générales de Bantubeat, ",
+        "description2v5": "vous acceptez la ",
+        "description2v6": "politique de confidentialités de bantubeat ",
+        "description2v7": "et toutes les politiques et conditions de Bantubeat.",
+        "confirm": "Confirm",
+        "return": "retour."
     },
     "modal_redirection": {
         "title": "Redirection",
@@ -582,5 +605,12 @@
         "flat_text": "Flat",
         "percentage_text": "100%",
         "discount_text": "Discount"
+    },
+    "subscription_page_screen": {
+        "current_scription": "Votre abonnement actuel",
+        "migrate_to": "MIGRER VERS",
+        "beatzcoin_amount": "Solde Beatzcoin",
+        "buy_chips": "Acheter des Jetons",
+        "cash_your_chips": "Encaisser vos Jetons"
     }
 }

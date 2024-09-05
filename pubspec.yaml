@@ -26,6 +26,7 @@ dependencies:
   google_fonts: ^6.2.1
   image_picker: ^1.1.2
   path: ^1.9.0
+  proste_bezier_curve: ^2.0.2
   smart_select: ^4.3.3
   url_strategy: ^0.3.0
   flutter_chat_bubble:

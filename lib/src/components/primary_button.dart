@@ -4,8 +4,8 @@ import 'button.dart';
 
 class PrimaryButton extends Button {
   final String text;
-  final FontWeight? fontWeight;
   final Color color;
+  final FontWeight? fontWeight;
 
   const PrimaryButton({
     required this.text,

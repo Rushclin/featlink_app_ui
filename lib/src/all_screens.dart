@@ -23,6 +23,7 @@ import 'screens/_discovery/discovery_in_my_city_screen.dart';
 import 'screens/_swipe/featlink_without_limits_screen/featlink_without_limits_offre_91_screen.dart';
 import 'screens/_swipe/featlink_without_limits_screen/featlink_without_limits_offre_92_screen.dart';
 import 'screens/_swipe/featlink_without_limits_screen/featlink_without_limits_offre_93_screen.dart';
+import 'screens/_subscription/subscription_page_screen.dart';
 import 'screens/_swipe/filter_screen/filter_screen.dart';
 import 'screens/welcome2_screen/welcome2_screen.dart';
 import 'screens/welcome_screen.dart';
@@ -108,6 +109,8 @@ final Map<String, Widget Function()> allScreens = {
       const FeatlinkWithoutLimitsOffre92Screen(),
   'featlink_without_limits_offre_93_screen.dart': () =>
       const FeatlinkWithoutLimitsOffre93Screen(),
+
+  'subscription_page_screen.dart': () => SubscriptionPageScreen(),
 
   // Ajoutez d'autres chemins de fichiers ici
 };

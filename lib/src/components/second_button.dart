@@ -8,6 +8,9 @@ class SecondButton extends Button {
   final Color color;
   final Color colorOfColoredText;
   final FontWeight? fontWeight;
+  final Gradient? gradient;
+  final double? containerWidth;
+  final double? containerHeight;
 
   const SecondButton({
     required this.text,
@@ -16,6 +19,11 @@ class SecondButton extends Button {
     this.color = Colors.white,
     this.colorOfColoredText = const Color(0xFF62BAF3),
     this.fontWeight = FontWeight.normal,
+    this.containerWidth = 100,
+    this.containerHeight = 50,
+    this.gradient = const LinearGradient(
+      colors: [Colors.white, Color(0xFFA4A4A4)],
+    ),
     super.fontSize,
     super.isLoading,
     super.disabled,
@@ -28,19 +36,30 @@ class SecondButton extends Button {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor,
-        fixedSize: fixedSize,
-        shape: RoundedRectangleBorder(
-          borderRadius: borderRadius,
-          side: BorderSide(color: borderColor, width: borderWidth),
-        ),
+    final buttonContent = isLoading
+        ? const CircularProgressIndicator(color: Colors.white)
+        : _buildButtonContent();
+    return Container(
+      width: containerWidth,
+      height: containerHeight,
+      decoration: BoxDecoration(
+        borderRadius: borderRadius,
+        color: gradient == null ? backgroundColor : null,
+        gradient: gradient,
       ),
-      onPressed: () {},
-      child: isLoading
-          ? const CircularProgressIndicator(color: Colors.white)
-          : _buildButtonContent(),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          fixedSize: fixedSize,
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: borderRadius,
+          ),
+          padding: EdgeInsets.zero,
+        ),
+        onPressed: disabled ? null : () {},
+        child: buttonContent,
+      ),
     );
   }
 
@@ -49,14 +68,14 @@ class SecondButton extends Button {
       final parts = text.split(coloredText!);
       return RichText(
         text: TextSpan(
-          style: TextStyle(fontSize: fontSize, color: Colors.white),
+          style: TextStyle(fontSize: fontSize, color: color),
           children: [
             TextSpan(text: parts[0]),
             TextSpan(
               text: coloredText,
               style: TextStyle(
                 color: colorOfColoredText,
-                fontWeight: FontWeight.bold,
+                fontWeight: fontWeight,
               ),
             ),
             if (parts.length > 1) TextSpan(text: parts[1]),
@@ -66,7 +85,7 @@ class SecondButton extends Button {
     } else {
       return Text(
         text,
-        style: TextStyle(fontSize: fontSize, color: Colors.white),
+        style: TextStyle(fontSize: fontSize, color: color),
       );
     }
   }

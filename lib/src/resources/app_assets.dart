@@ -88,4 +88,16 @@ final class AppAssets {
   static const smilingFaceWithHeartEyes =
       'assets/images/smiling-face-with-heart-eyes.gif';
   static const flatImage = 'assets/images/flat_image.png';
+
+  static const subscriberProfileImage =
+      'assets/images/subscriber_profile_image.png';
+
+  static const imageMedal2 = 'assets/images/medal2.png';
+  static const imageMedal3 = 'assets/images/medal3.png';
+  static const imageMedal4 = 'assets/images/medal4.png';
+  static const imageMedal5 = 'assets/images/medal5.png';
+  static const imageMedal6 = 'assets/images/medal6.png';
+  static const imageMedal7 = 'assets/images/medal7.png';
+  static const imageVip1 = 'assets/images/vip1_image.png';
+  static const imageVip2 = 'assets/images/vip2_image.png';
 }
